@@ -1,14 +1,13 @@
 class Solution(object):
-    def twoSum(self, nums, target):
+    def isPalindrome(self, x):
+# thought process: to access the indices of the number, i should convert it to a string first
+# check if the string from position 0 till the end is equal to when we reverse the string and start from -1
+        y = str(x)
+        if y[0:] == y[::-1]:
+            return True
+        else:
+            return False
         """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
+        :type x: int
+        :rtype: bool
         """
-        index_sum = []
-        for i in range(len(nums)):
-            for j in range(len(nums)):
-                if nums[i] + nums[j] == target and i != j:
-                    index_sum.append(i)
-                    index_sum.append(j)
-                    return index_sum
