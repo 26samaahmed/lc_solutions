@@ -19,7 +19,9 @@ class Solution(object):
 
 # 1. input: an array of nums
 # 2. output: the number that appears the most in the array
-# 3. thought process: i would calculate the value for the floor rounding of the array size divided by 2. Then I would create a dictionary where i increment the count for the number everytime it appears. Then i would loop through each pair and compare the values with the len(nums)// 2 and if it's bigger then return the key
+# 3. thought process: i would calculate the value for the floor rounding of the array size divided by 2. Then I would create 
+# a dictionary where i increment the count for the number everytime it appears. Then i would loop through each pair and compare 
+# the values with the len(nums)// 2 and if it's bigger then return the key
 # 4. edge cases i thought of: 
 # - if there are 2 numbers that are both considered the majority element (occur an equal amount of times)
 # - if there is only 1 element in the array
