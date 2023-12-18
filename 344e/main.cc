@@ -1,7 +1,7 @@
 class Solution {
 public:
     void reverseString(vector<char>& s) {
-        // creating a variable that starts from the last letter and i will increment as i go through the loop
+        // creating a variable that starts from the last letter and i will decrement as i go through the loop
         int end = s.size() - 1;
         // i will start looping from the first index
         for (int begin = 0; begin < end; begin++ ) {
