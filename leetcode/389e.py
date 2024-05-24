@@ -22,7 +22,7 @@ class Solution(object):
             if k not in s_map or s_map[k] < t_map[k]:
                 return k
 
-# Thought Process: store the occurence of each value in each string in dicts
-# then compare the values in the dicts, if a key in t has a bigger value than the same key in s, then return that key because that is the difference
-# also check if the key at t doesn't exist in the s dict because if so then we found the extra letter
+# Thought Process: store the occurence of each value in each string in hashmaps
+# then compare the values in the hashmap, if a key in t has a bigger value than the same key in s, then return that key because that is the difference
+# also check if the key at t doesn't exist in the s hashmap because if so then we found the extra letter
         
