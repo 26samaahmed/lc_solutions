@@ -11,11 +11,8 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        // Start by creating a 3rd list that will combine both
-        // Then start by checking that if both head's of the list don't point to nullptr (not empty)
-        // then check if list 1's current node's value is less than list 2's current node's value.
-        // if it is then push to list 3. If list 2's current node's value is less than the node in list 1 then push it to list 3.
-        // Note that if they're equal, then just push both nodes to list 3 since the order of the 2 nodes won't matter in this case
+        // Create a dummynode where we will start merging the 2 lists. Make sure that neither of the lists is empty. Then compare each list's current node's value
+        // and adjust where temp points to based on that
 
         ListNode * list3 = new ListNode();
         ListNode * temp = list3;
@@ -34,7 +31,7 @@ public:
             temp = temp->next;
         }
 
-        // What if one of the lists is empty
+        // If we went through one of the lists but we still have some nodes left in the other list, then just merge the leftover nodes to the merged list since they are already sorted
         if (list1 == nullptr) {
             temp->next = list2;
         } else if (list2 == nullptr) {
