@@ -5,11 +5,11 @@ class Solution(object):
         :rtype: int
         """
         counter = 0
-        for x in range(len(nums)):
+        for x in range(len(nums) + 1):
             for i in nums:
-                if i >= x + 1:
+                if i >= x:
                     counter += 1
-            if counter == x + 1:
+            if counter == x:
                 return counter
             else:
                 counter = 0
